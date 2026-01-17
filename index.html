@@ -1,57 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Puja Janala</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Puja Janala | Personal Website</title>
+
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
       margin: 0;
-      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f6f8;
+      color: #333;
       text-align: center;
     }
+
     header {
-      background: #6200ea;
+      background: #6a5acd;
       color: white;
-      padding: 30px 10px;
+      padding: 40px 20px;
     }
+
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    .lang-buttons {
+      margin-top: 20px;
+    }
+
+    .lang-buttons button {
+      padding: 10px 18px;
+      margin: 5px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .lang-buttons button:hover {
+      opacity: 0.85;
+    }
+
+    .btn-nepali {
+      background: #ff9800;
+      color: white;
+    }
+
+    .btn-english {
+      background: #4caf50;
+      color: white;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 30px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
     section {
-      padding: 20px;
+      display: none;
     }
+
+    section.active {
+      display: block;
+    }
+
+    h2 {
+      color: #6a5acd;
+    }
+
     footer {
+      margin-top: 40px;
+      padding: 15px;
       background: #222;
-      color: white;
-      padding: 10px;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    a {
+      color: #6a5acd;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
+
 <body>
 
-<header>
-  <h1>🙏 Welcome</h1>
-  <h2>पुजा जनाला</h2>
-  <p>My Personal Website (Nepali / English)</p>
-</header>
+  <header>
+    <h1>Puja Janala</h1>
+    <p>Personal Website · Nepali / English</p>
 
-<section>
-  <h3>About Me</h3>
-  <p>Hello! This is my personal website hosted on GitHub Pages.</p>
-  <p>नमस्ते! यो मेरो व्यक्तिगत वेबसाइट हो।</p>
-</section>
+    <div class="lang-buttons">
+      <button class="btn-nepali" onclick="showNepali()">नेपाली</button>
+      <button class="btn-english" onclick="showEnglish()">English</button>
+    </div>
+  </header>
 
-<section>
-  <h3>Contact</h3>
-  <p>Email: janalapuja0@gmail.com</p>
-</section>
+  <main>
+    <!-- Nepali Section -->
+    <section id="nepali" class="active">
+      <h2>नमस्ते 👋</h2>
+      <p>
+        म पूजा जनाला हुँ।  
+        यो मेरो व्यक्तिगत वेबसाइट हो।
+      </p>
+      <p>
+        यहाँ मैले मेरा विचार, सिर्जना  
+        र व्यक्तिगत यात्रा साझा गर्छु।
+      </p>
 
-<footer>
-  © 2026 Puja Janala
-</footer>
+      <p>
+        📧 Email: <strong>janalapuja0@gmail.com</strong><br/>
+        🔗 Facebook:
+        <a href="https://www.facebook.com/profile.php?id=61585436115626" target="_blank">
+          Visit Profile
+        </a>
+      </p>
+    </section>
+
+    <!-- English Section -->
+    <section id="english">
+      <h2>Hello 👋</h2>
+      <p>
+        I’m <strong>Puja Janala</strong>.  
+        This is my personal website.
+      </p>
+      <p>
+        Here, I share my thoughts, creativity,  
+        and parts of my personal journey.
+      </p>
+
+      <p>
+        📧 Email: <strong>janalapuja0@gmail.com</strong><br/>
+        🔗 Facebook:
+        <a href="https://www.facebook.com/profile.php?id=61585436115626" target="_blank">
+          Visit Profile
+        </a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Puja Janala · Built with GitHub Pages
+  </footer>
+
+  <script>
+    function showNepali() {
+      document.getElementById("nepali").classList.add("active");
+      document.getElementById("english").classList.remove("active");
+    }
+
+    function showEnglish() {
+      document.getElementById("english").classList.add("active");
+      document.getElementById("nepali").classList.remove("active");
+    }
+  </script>
 
 </body>
 </html>
