@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Puja Janala | Personal Website</title>
+
+<style>
+:root {
+  --bg: #f4f6f8;
+  --text: #222;
+  --card: #ffffff;
+}
+.dark {
+  --bg: #121212;
+  --text: #eaeaea;
+  --card: #1f1f1f;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.3s;
+}
+
+header {
+  background: linear-gradient(135deg, #6a5acd, #836fff);
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+.controls button {
+  padding: 10px 16px;
+  margin: 5px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+main {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.card {
+  background: var(--card);
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+section {
+  display: none;
+}
+section.active {
+  display: block;
+}
+
+h2 {
+  color: #6a5acd;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #222;
+  color: #aaa;
+  margin-top: 40px;
+}
+
+a {
+  color: #6a5acd;
+  text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Puja Janala</h1>
+  <p>Personal Website · Poems · Nepali / English</p>
+
+  <div class="controls">
+    <button onclick="showNep()">🇳🇵 Nepali</button>
+    <button onclick="showEng()">🇬🇧 English</button>
+    <button onclick="toggleDark()">🌙 / ☀️</button>
+  </div>
+</header>
+
+<main>
+
+  <!-- Nepali -->
+  <section id="nep" class="active">
+    <div class="card">
+      <h2>नमस्ते 👋</h2>
+      <p>
+        म पूजा जनाला हुँ।  
+        यो मेरो व्यक्तिगत वेबसाइट हो जहाँ  
+        म आफ्ना कविता र विचार साझा गर्छु।
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>✍️ कविता: प्रेमको आभास</h2>
+      <p>
+        प्रेमको आभास कसरी भनु, कस्तो लाग्छ<br>
+        जति धेरै नै दिए पनि नपुगे जस्तो लाग्छ।
+      </p>
+      <p>
+        कति रहेछ यसको मूल्य कसरी थाहा पाउनु,<br>
+        माया नपाए महँगो लाग्छ,<br>
+        पाएपछि निकै सस्तो लाग्छ।
+      </p>
+    </div>
+  </section>
+
+  <!-- English -->
+  <section id="eng">
+    <div class="card">
+      <h2>Hello 👋</h2>
+      <p>
+        I’m Puja Janala.  
+        This is my personal space where  
+        I share poems and thoughts.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>✍️ Poem: The Feeling of Love</h2>
+      <p>
+        How do I explain the feeling of love,<br>
+        No matter how much I give,<br>
+        It still feels like it’s never enough.
+      </p>
+      <p>
+        What is its true value, how can I know?<br>
+        Without love, it feels too expensive,<br>
+        With love, even the priceless feels cheap.
+      </p>
+    </div>
+  </section>
+
+  <div class="card">
+    <h2>📬 Contact</h2>
+    <p>
+      📧 Email: <strong>janalapuja0@gmail.com</strong><br>
+      🔗 Facebook:
+      <a href="https://www.facebook.com/profile.php?id=61585436115626" target="_blank">
+        Visit Profile
+      </a>
+    </p>
+  </div>
+
+</main>
+
+<footer>
+  © 2026 Puja Janala · Built with GitHub Pages
+</footer>
+
+<script>
+function showNep() {
+  document.getElementById("nep").classList.add("active");
+  document.getElementById("eng").classList.remove("active");
+}
+function showEng() {
+  document.getElementById("eng").classList.add("active");
+  document.getElementById("nep").classList.remove("active");
+}
+function toggleDark() {
+  document.body.classList.toggle("dark");
+}
+</script>
+
+</body>
+</html>
